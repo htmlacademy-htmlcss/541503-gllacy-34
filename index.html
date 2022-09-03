@@ -53,23 +53,23 @@
           <li class="user-menu-item">
             <a class="user-menu-link user-menu-link-tel" href="tel:+78005558628">+7 800 555-86-28</a>
           </li>
-          <li class="user-menu-item">
+          <li class="user-menu-item user-menu-item-search">
             <a class="user-menu-link user-menu-link-search" href="#">
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Иконка поиска.">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M1.66 6.19a4.67 4.67 0 1 1 9.34 0 4.67 4.67 0 0 1-9.34 0Zm8.42 4.69a6 6 0 1 1 .94-.94l2.45 2.44a.67.67 0 1 1-.94.95l-2.45-2.45Z" fill="#2D3440"/>
               </svg>
               <span class="visually-hidden">Поиск</span>
-              <div class="header-popover search-link-popover">
-                <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
-                  <label class="search-input-label visually-hidden" for="search-field">Введите предмет поиска</label>
-                  <input class="search-input" id="search-field" name="search" type="text" placeholder="Поиск по сайту" value="" required>
-                  <button class="search-input-delete-btn" type="reset">
-                    <span class="visually-hidden">Очистить поле ввода</span>
-                  </button>
-                  <button class="search-btn visually-hidden" type="submit">Найти</button>
-                </form>
-              </div>
             </a>
+            <div class="header-popover search-link-popover">
+              <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
+                <label class="search-input-label visually-hidden" for="search-field">Введите предмет поиска</label>
+                <input class="search-input" id="search-field" name="search" type="text" placeholder="Поиск по сайту" value="" required>
+                <button class="search-input-delete-btn" type="reset">
+                  <span class="visually-hidden">Очистить поле ввода</span>
+                </button>
+                <button class="search-btn visually-hidden" type="submit">Найти</button>
+              </form>
+            </div>
           </li>
           <li class="user-menu-item">
             <a class="user-menu-link user-menu-link-enter" href="#">
@@ -141,10 +141,10 @@
                   </button>
                 </li>
               </ul>
-              <footer class="cart-link-popover-footer">
-                <a class="btn btn-accent" type="btn">Оформить заказ</a>
+              <div class="cart-link-popover-footer">
+                <a class="btn btn-accent" href="#">Оформить заказ</a>
                 <span class="cart-link-popover-order-result-price">Итого: 790 ₽</span>
-              </footer>
+              </div>
             </div>
             <div class="header-popover cart-link-popover cart-free-link-popover">
               <h3 class="user-link-popover-title">Ваша корзина пока пуста</h3>
@@ -366,38 +366,39 @@
         </div>
         <form class="delivery-form" action="https://echo.htmlacademy.ru" method="post">
           <p class="delivery-form-lead">Укажите адрес и&nbsp;дату доставки, и&nbsp;мы свяжемся с&nbsp;вами, чтобы подтвердить заказ.</p>
-          <p class="input-label-wrapper">
+          <div class="input-label-wrapper">
             <div class="label-with-tooltip-wrapper">
               <label class="delivery-form-label delivery-form-label-with-tooltip" for="delivery-form-date-field">Дата</label>
               <button class="tooltip-btn delivery-form-tooltip-btn">
                 <span class="visually-hidden">Информация</span>
               </button>
-              <div class="tooltip" id="tooltip-wrapper" role="tooltip">
+              <div class="tooltip" id="date-tooltip-wrapper" role="tooltip">
                 <p class="tooltip-text">Тултип</p>
               </div>
             </div>
-            <input class="delivery-form-date-input" id="delivery-form-date-field" name="delivery-date" type="date" placeholder="01.04.2020" value="" required>
-          </p>
-          <p class="input-label-wrapper">
+            <input class="delivery-form-date-input" id="delivery-form-date-field" name="delivery-date" type="date" value="2020-04-01" required>
+          </div>
+          <div class="input-label-wrapper">
             <label class="delivery-form-label" for="delivery-form-phone-number-field">Дата</label>
             <input class="delivery-form-phone-number-input" id="delivery-form-phone-number-field" name="customer-phone-number" type="tel" pattern="[+]{1}[0-9]{1} [0-9]{3} [0-9]{3}-[0-9]{2}-[0-9]{2}" placeholder="+7 800 999-00-00" value="" required>
-          </p>
-          <p class="input-label-wrapper">
+          </div>
+          <div class="input-label-wrapper">
             <div class="label-with-tooltip-wrapper">
               <label class="delivery-form-label delivery-form-label-with-tooltip" for="delivery-form-address-field">Дата</label>
               <button class="tooltip-btn delivery-form-tooltip-btn">
                 <span class="visually-hidden">Адрес</span>
               </button>
-              <div class="tooltip" id="tooltip-wrapper" role="tooltip">
+              <div class="tooltip" id="address-tooltip-wrapper" role="tooltip">
                 <p class="tooltip-text">Введите название улицы, дома и&nbsp;квартиры</p>
               </div>
             </div>
             <input class="delivery-form-address-input" id="delivery-form-address-field" name="delivery-address" type="text" placeholder="ул. Большая Конюшенная, 19/8" value="" required>
-          </p>
+          </div>
           <button class="btn btn-accent" type="submit">Отправить</button>
         </form>
       </section>
       <section class="contacts">
+        <h2 class="visually-hidden">Контакты</h2>
         <div class="contacts-text-content">
           <dl class="contacts-list">
             <div class="contacts-item">
@@ -419,6 +420,7 @@
       </section>
     </main>
     <footer class="page-footer">
+      <h2 class="visually-hidden">Подвал сайта</h2>
       <ul class="socials-list">
         <li class="socials-item">
           <a class="socials-link socials-link-telegram" href="https://t.me/htmlacademy">
@@ -460,7 +462,7 @@
         <a class="htmlacademy-link-logo" href="tttps://htmlacademy.ru">
           <img src="images/logo-htmlacademy.svg" width="93" height="27" alt="Логотип HTML Академии.">
         </a>
-        <p class="page-footer-copyright">Сделано в&nbsp;<a class="htmlacademy-link-small">.html academy</a> © 2021</p>
+        <p class="page-footer-copyright">Сделано в&nbsp;<a class="htmlacademy-link-small">.html academy</a> ©&nbsp;2021</p>
       </div>
     </footer>
     <div class="modal-feedback-wrapper">
@@ -470,9 +472,9 @@
         </button>
         <h2 class="modal-feedback-title">Мы обязательно ответим вам!</h2>
         <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
-          <label class="visually-hidden" for="feedback-form-name-input">Введите Ваши имя и фамилию</label>
+          <label class="visually-hidden" for="feedback-form-name-field">Введите Ваши имя и фамилию</label>
           <input class="feedback-form-name-input" id="feedback-form-name-field" name="user-name" type="text" placeholder="Имя и фамилия" value="" required>
-          <label class="visually-hidden" for="feedback-form-email-input">Введите Ваш email</label>
+          <label class="visually-hidden" for="feedback-form-email-field">Введите Ваш email</label>
           <input class="feedback-form-email-input" id="feedback-form-email-field" name="user-email" type="email" placeholder="email@example.com" value="" required>
           <label class="visually-hidden" for="feedback-form-message-textarea">Введите Ваше сообщение нам</label>
           <textarea class="feedback-form-message-area" id="feedback-form-message-textarea" name="user-message" rows="10" placeholder="В свободной форме"></textarea>
