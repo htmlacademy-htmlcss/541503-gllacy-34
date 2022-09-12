@@ -22,7 +22,7 @@
         </a>
         <ul class="site-menu">
           <li class="site-menu-item">
-            <a class="site-menu-link site-menu-link-catalog" href="catalog.html">Каталог</a>
+            <a class="site-menu-link site-menu-link-current site-menu-link-catalog" href="catalog.html">Каталог</a>
             <div class="header-popover catalog-link-popover">
               <ul class="catalog-link-popover-list">
                 <li class="catalog-link-popover-item catalog-link-popover-item-accent">
@@ -166,7 +166,7 @@
           <a class="breadcrumbs-link" href="catalog.html">Каталог</a>
         </li>
       </ul>
-      <section class="catalog-creamy-ice-cream">
+      <section class="catalog-main-content catalog-creamy-ice-cream">
         <h2 class="section-title">Сливочное мороженое</h2>
         <form class="catalog-filters-form" action="https://echo.htmlacademy.ru" method="post">
           <h3 class="visually-hidden">Фильтры каталога</h3>
@@ -192,59 +192,65 @@
               <label class="visually-hidden" for="filter-max-price">до</label>
               <input class="filters-form-range-input filters-form-max-price" id="filter-max-price" name="max-price" type="number" value="500">&nbsp;₽
             </legend>
-            <div class="filters-form-range-scale">
-              <div class="filters-form-range-bar" style="left: 32px;
-                                                         width: 72px;">
-                <button class="filters-form-range-toggle filters-form-range-toggle-min" type="button">
-                  <span class="visually-hidden">Изменить минимальную цену</span>
-                </button>
-                <button class="filters-form-range-toggle filters-form-range-toggle-max" type="button">
-                  <span class="visually-hidden">Изменить максимальную цену</span>
-                </button>
+            <div class="filters-form-range">
+              <div class="filters-form-range-scale">
+                <div class="filters-form-range-bar" style="left: 32px;
+                                                          width: 72px;">                                      
+                  <button class="filters-form-range-toggle filters-form-range-toggle-min" type="button">
+                    <span class="visually-hidden">Изменить минимальную цену</span>
+                  </button>
+                  <button class="filters-form-range-toggle filters-form-range-toggle-max" type="button">
+                    <span class="visually-hidden">Изменить максимальную цену</span>
+                  </button>
+                </div>
               </div>
             </div>
           </fieldset>
           <fieldset class="filters-form-group">
             <legend class="filters-form-group-title">Жирность:</legend>
-            <p class="input-label-wrapper">
-              <input class="filters-form-fat-content-input visually-hidden" id="fat-content-zero-percents" name="fat-content-percents" type="radio">
-              <label class="filters-form-radio-label" for="fat-content-zero-percents">0%</label>
-            </p>
-            <p class="input-label-wrapper">
-              <input class="filters-form-fat-content-input visually-hidden" id="fat-content-to-ten-percents" name="fat-content-percents" type="radio" checked>
-              <label class="filters-form-radio-label" for="fat-content-to-ten-percents">до&nbsp;10%</label>
-            </p>
-            <p class="input-label-wrapper">
-              <input class="filters-form-fat-content-input visually-hidden" id="fat-content-to-thirty-percents" name="fat-content-percents" type="radio">
-              <label class="filters-form-radio-label" for="fat-content-to-ten-percents">до&nbsp;30%</label>
-            </p>
-            <p class="input-label-wrapper">
-              <input class="filters-form-fat-content-input visually-hidden" id="fat-content-more-thirty-percents" name="fat-content-percents" type="radio">
-              <label class="filters-form-radio-label" for="fat-content-more-thirty-percents">выше&nbsp;30%</label>
-            </p>
+            <div class="filters-form-group-wrapper">
+              <p class="input-label-wrapper">
+                <input class="filters-form-fat-content-input visually-hidden" id="fat-content-zero-percents" name="fat-content-percents" type="radio">
+                <label class="filters-form-radio-label" for="fat-content-zero-percents">0%</label>
+              </p>
+              <p class="input-label-wrapper">
+                <input class="filters-form-fat-content-input visually-hidden" id="fat-content-to-ten-percents" name="fat-content-percents" type="radio" checked>
+                <label class="filters-form-radio-label" for="fat-content-to-ten-percents">до&nbsp;10%</label>
+              </p>
+              <p class="input-label-wrapper">
+                <input class="filters-form-fat-content-input visually-hidden" id="fat-content-to-thirty-percents" name="fat-content-percents" type="radio">
+                <label class="filters-form-radio-label" for="fat-content-to-thirty-percents">до&nbsp;30%</label>
+              </p>
+              <p class="input-label-wrapper">
+                <input class="filters-form-fat-content-input visually-hidden" id="fat-content-more-thirty-percents" name="fat-content-percents" type="radio">
+                <label class="filters-form-radio-label" for="fat-content-more-thirty-percents">выше&nbsp;30%</label>
+              </p>
+            </div>
           </fieldset>
           <fieldset class="filters-form-group">
             <legend class="filters-form-group-title">Наполнители:</legend>
-            <p class="input-label-wrapper">
-              <input class="filters-form-fillers-input visually-hidden" id="chocolate-fillers" name="chocolate" type="checkbox" checked>
-              <label class="filters-form-checkbox-label" for="sugar-sprinkles">шоколадные</label>
-            </p>
-            <p class="input-label-wrapper">
-              <input class="filters-form-fillers-input visually-hidden" id="sugar-sprinkles" name="sugar" type="checkbox" checked>
-              <label class="filters-form-checkbox-label" for="sugar-sprinkles">сахарные посыпки</label>
-            </p>
-            <p class="input-label-wrapper">
-              <input class="filters-form-fillers-input visually-hidden" id="fruits-fillers" name="fruits" type="checkbox">
-              <label class="filters-form-checkbox-label" for="fruits-fillers">фрукты</label>
-            </p>
-            <p class="input-label-wrapper">
-              <input class="filters-form-fillers-input visually-hidden" id="syrups-fillers" name="syrups" type="checkbox">
-              <label class="filters-form-checkbox-label" for="syrups-fillers">сиропы</label>
-            </p>
-            <p class="input-label-wrapper">
-              <input class="filters-form-fillers-input visually-hidden" id="jams-fillers" name="jams" type="checkbox">
-              <label class="filters-form-checkbox-label" for="jams-fillers">джемы</label>
-            </p>
+            <div class="filters-form-group-wrapper">
+              <p class="input-label-wrapper">
+                <input class="filters-form-checkbox-input visually-hidden" id="chocolate-filter" name="chocolate" type="checkbox" checked>
+                <label class="filters-form-checkbox-label" for="chocolate-filter">шоколадные</label>
+              </p>
+              <p class="input-label-wrapper">
+                <input class="filters-form-checkbox-input visually-hidden" id="sugar-sprinkles" name="sugar" type="checkbox" checked>
+                <label class="filters-form-checkbox-label" for="sugar-sprinkles">сахарные посыпки</label>
+              </p>
+              <p class="input-label-wrapper">
+                <input class="filters-form-checkbox-input visually-hidden" id="fruits-filter" name="fruits" type="checkbox">
+                <label class="filters-form-checkbox-label" for="fruits-filter">фрукты</label>
+              </p>
+              <p class="input-label-wrapper">
+                <input class="filters-form-checkbox-input visually-hidden" id="syrups-filter" name="syrups" type="checkbox">
+                <label class="filters-form-checkbox-label" for="syrups-filter">сиропы</label>
+              </p>
+              <p class="input-label-wrapper">
+                <input class="filters-form-checkbox-input visually-hidden" id="jams-filter" name="jams" type="checkbox">
+                <label class="filters-form-checkbox-label" for="jams-filter">джемы</label>
+              </p>
+            </div>
           </fieldset>
           <button class="btn btn-secondary" type="submit">Применить</button>
         </form>
@@ -474,7 +480,7 @@
                   <a class="catalog-cards-control-btn" href="#">2</a>
                 </li>
                 <li class="catalog-cards-pagination-item">
-                  <a class="catalog-cards-control-btn" href="#">3</a>
+                  <a class="catalog-cards-control-btn catalog-cards-control-btn-current" href="#">3</a>
                 </li>
                 <li class="catalog-cards-pagination-item">
                   <a class="catalog-cards-control-btn" href="#">4</a>
