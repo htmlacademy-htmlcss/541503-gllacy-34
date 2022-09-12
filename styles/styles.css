@@ -148,8 +148,9 @@ img {
 .catalog-main input:focus,
 .page-footer a:focus,
 .page-footer button:focus,
-.feedback-form input:focus,
-.feedback-form button:focus {
+.modal-feedback input:focus,
+.modal-feedback textarea,
+.modal-feedback button:focus {
   outline: none;
 }
 
@@ -157,7 +158,7 @@ img {
 .index-main button,
 .catalog-main button,
 .page-footer button,
-.feedback-form button {
+.modal-feedback button {
   cursor: pointer;
 }
 
@@ -486,17 +487,18 @@ img {
 
 .search-input-delete-btn {
   position: absolute;
-  right: 16px;
-  top: 18px;
+  right: 14px;
+  top: 16px;
 
   display: block;
   padding: 0;
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
 
-  background-image: url(../images/icons.svg);
+  background-color: transparent;
+  background-image: url("../images/icons.svg");
   background-repeat: no-repeat;
-  background-position: -160px -192px;
+  background-position: -158px -190px;
   opacity: 0;
   border: none;
 }
@@ -608,6 +610,10 @@ img {
 
 .cart-link-popover-item-in-cart:last-child {
   margin-bottom: 32px;
+}
+
+.cart-link-popover .to-card-link-in-cart {
+  text-decoration: none;
 }
 
 .cart-link-popover-item-in-cart-img-wrapper {
@@ -1209,3 +1215,98 @@ img {
   color: var(--color-dark);
 }
 
+.modal-feedback-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+  display: none;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(45, 52, 64, 0.3);
+}
+
+/*Добавить элементу div с классом "modal-feedback-wrapper" класс "modal-feedback-wrapper-shown" для появления модального окна*/
+.modal-feedback-wrapper-shown {
+  display: block;
+}
+
+.modal-feedback {
+  position: relative;
+  top: 50%;
+  z-index: 11;
+
+  margin: 0 auto;
+  padding: 64px 62px 66px 64px;
+  width: 570px;
+
+  background-color: var(--color-extra-light);
+  border-radius: 8px;
+
+  transform: translateY(-50%);
+}
+
+.modal-feedback-close-btn {
+  position: absolute;
+  top: 32px;
+  right: 32px;
+
+  display: block;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+
+  background-color: transparent;
+  background-image: url("../images/icons.svg");
+  background-repeat: no-repeat;
+  background-position: -158px -190px;
+  border: none;
+
+  cursor: pointer;
+}
+
+.modal-feedback-title {
+  margin: 0 0 32px;
+
+  font-size: var(--subtitle-font-l);
+  line-height: var(--line-height-xl);
+  font-weight: var(--bold);
+  color: var(--color-extra-dark);
+}
+
+.feedback-form .input-label-wrapper {
+  margin: 0 0 16px;
+}
+
+.textarea-label-wrapper {
+  margin: 0 0 32px;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+  padding: 14px 16px;
+  width: 100%;
+
+  font-size: var(--font-m);
+  line-height: var(--line-height-s);
+  color: var(--color-extra-dark);
+
+  border: 1px solid var(--color-neutral-dark);
+  border-radius: 4px;
+}
+
+.feedback-form textarea {
+  resize: none;
+}
+
+.feedback-form input::placeholder,
+.feedback-form textarea::placeholder {
+  color: var(--color-neutral-dark);
+}
+
+.feedback-form .btn-accent {
+  display: block;
+  margin-left: auto;
+}

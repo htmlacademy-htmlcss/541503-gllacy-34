@@ -63,15 +63,11 @@
             </a>
             <div class="header-popover search-link-popover">
               <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
-                <p class="input-label-wrapper">
                   <label class="search-input-label visually-hidden" for="search-field">Введите предмет поиска</label>
                   <input class="search-input" id="search-field" name="search" type="text" placeholder=" Поиск по сайту" value="" required>
-                </p>
-                <p class="input-label-wrapper">
                   <label class="visually-hidden" for="search-delete-btn">Очистить поле ввода</label>
                   <input class="search-input-delete-btn" id="search-delete-btn" type="reset" value="">
-                </p>
-                <button class="search-btn visually-hidden" type="submit">Найти</button>
+                  <button class="search-btn visually-hidden" type="submit">Найти</button>
               </form>
             </div>
           </li>
@@ -119,27 +115,31 @@
               <h2 class="user-link-popover-title">Корзина</h2>
               <ul class="cart-link-popover-items-in-cart-list">
                 <li class="cart-link-popover-item-in-cart">
-                  <div class="cart-link-popover-item-in-cart-img-wrapper">
-                    <img src="images/raspberry.jpg" width="46" height="46" alt="Мороженое малинка.">
-                  </div>
-                  <dl class="cart-link-popover-item-description-list">
-                    <dt class="cart-link-popover-item-description-title">Малинка</dt>
-                    <dd class="cart-link-popover-item-description-definition">1 кг х 310 ₽</dd>
-                  </dl>
-                  <span class="cart-link-popover-item-price">310 ₽</span>
+                  <a class="to-card-link-in-cart" href="#">
+                    <div class="cart-link-popover-item-in-cart-img-wrapper">
+                      <img src="images/raspberry.jpg" width="46" height="46" alt="Мороженое малинка.">
+                    </div>
+                    <dl class="cart-link-popover-item-description-list">
+                      <dt class="cart-link-popover-item-description-title">Малинка</dt>
+                      <dd class="cart-link-popover-item-description-definition">1 кг х 310 ₽</dd>
+                    </dl>
+                    <span class="cart-link-popover-item-price">310 ₽</span>
+                  </a>  
                   <button class="cart-link-popover-delete-item-btn" type="button">
                     <span class="visually-hidden">Удалить из корзины</span>
                   </button>
                 </li>
                 <li class="cart-link-popover-item-in-cart">
-                  <div class="cart-link-popover-item-in-cart-img-wrapper">
-                    <img src="images/bubblegum.jpg" width="46" height="46" alt="Мороженое бабл-гам.">
-                  </div>
-                  <dl class="cart-link-popover-item-description-list">
-                    <dt class="cart-link-popover-item-description-title">Бабл-гам</dt>
-                    <dd class="cart-link-popover-item-description-definition">1,5 кг х 320 ₽</dd>
-                  </dl>
-                  <span class="cart-link-popover-item-price">480 ₽</span>
+                  <a class="to-card-link-in-cart" href="#">
+                    <div class="cart-link-popover-item-in-cart-img-wrapper">
+                      <img src="images/bubblegum.jpg" width="46" height="46" alt="Мороженое бабл-гам.">
+                    </div>
+                    <dl class="cart-link-popover-item-description-list">
+                      <dt class="cart-link-popover-item-description-title">Бабл-гам</dt>
+                      <dd class="cart-link-popover-item-description-definition">1,5 кг х 320 ₽</dd>
+                    </dl>
+                    <span class="cart-link-popover-item-price">480 ₽</span>
+                  </a>
                   <button class="cart-link-popover-delete-item-btn" type="button">
                     <span class="visually-hidden">Удалить из корзины</span>
                   </button>
@@ -491,7 +491,7 @@
           </p>
           <p class="textarea-label-wrapper">
             <label class="visually-hidden" for="feedback-form-message-textarea">Введите Ваше сообщение нам</label>
-            <textarea class="feedback-form-message-area" id="feedback-form-message-textarea" name="user-message" rows="10" placeholder="В свободной форме"></textarea>
+            <textarea class="feedback-form-message-area" id="feedback-form-message-textarea" name="user-message" rows="6" placeholder="В свободной форме"></textarea>
           </p>
           <button class="btn btn-accent" type="submit">Отправить</button>
         </form>
