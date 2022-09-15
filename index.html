@@ -21,7 +21,7 @@
           </svg>
         </a>
         <ul class="site-menu">
-          <li class="site-menu-item">
+          <li class="site-menu-item site-menu-item-catalog">
             <a class="site-menu-link site-menu-link-catalog" href="catalog.html">Каталог</a>
             <div class="header-popover catalog-link-popover">
               <ul class="catalog-link-popover-list">
@@ -63,11 +63,10 @@
             </a>
             <div class="header-popover search-link-popover">
               <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
-                  <label class="search-input-label visually-hidden" for="search-field">Введите предмет поиска</label>
-                  <input class="search-input" id="search-field" name="search" type="text" placeholder=" Поиск по сайту" value="" required>
-                  <label class="visually-hidden" for="search-delete-btn">Очистить поле ввода</label>
-                  <input class="search-input-delete-btn" id="search-delete-btn" type="reset" value="">
-                  <button class="search-btn visually-hidden" type="submit">Найти</button>
+                <label class="search-input-label visually-hidden" for="search-field">Введите предмет поиска</label>
+                <input class="search-input" id="search-field" name="search" type="text" placeholder="Поиск по сайту" value="" required>
+                <label class="visually-hidden" for="search-delete-btn">Очистить поле ввода</label>
+                <input class="search-input-delete-btn" id="search-delete-btn" type="reset" value="">
               </form>
             </div>
           </li>
@@ -90,7 +89,10 @@
                   <input class="user-profile-enter-password-input" id="user-profile-enter-password-field" name="user-password" type="password" value="111111" required>
                 </p>
                 <div class="user-profile-enter-form-bottom">
-                  <button class="btn btn-accent" type="submit">Войти</button>
+                  <button class="btn btn-accent" type="submit">
+                    <span>Войти</span>
+                    <span class="btn-loading-circle"></span>
+                  </button>
                   <ul class="user-profile-enter-form-links-list">
                     <li class="user-profile-enter-form-item">
                       <a class="user-profile-enter-form-link" href="#">Забыли пароль?</a>
@@ -103,7 +105,7 @@
               </form>
             </div>
           </li>
-          <li class="user-menu-item">
+          <li class="user-menu-item user-menu-item-cart">
             <a class="user-menu-link user-menu-link-cart" href="#">
               <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Иконка корзины.">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M1.17.1a.67.67 0 1 0 0 1.34h1.77l.47 2.34v.05l.97 4.83a1.83 1.83 0 0 0 1.82 1.47h5.62a1.83 1.83 0 0 0 1.82-1.47l.93-4.86a.67.67 0 0 0-.66-.8h-9.3L4.14.65a.67.67 0 0 0-.66-.53H1.17Zm4.52 8.3-.81-4.06h8.23l-.78 4.07a.5.5 0 0 1-.49.39H6.18a.5.5 0 0 1-.49-.4Zm-1.13 3.96a1.25 1.25 0 1 1 2.49 0 1.25 1.25 0 0 1-2.5 0Zm6.37 0a1.25 1.25 0 1 1 2.5 0 1.25 1.25 0 0 1-2.5 0Z" fill="#2D3440"/>
@@ -146,7 +148,10 @@
                 </li>
               </ul>
               <div class="cart-link-popover-footer">
-                <a class="btn btn-accent" href="#">Оформить заказ</a>
+                <a class="btn btn-accent" href="#">
+                  <span>Оформить заказ</span>
+                  <span class="btn-loading-circle"></span>
+                </a>
                 <span class="cart-link-popover-order-result-price">Итого: 790 ₽</span>
               </div>
             </div>
@@ -165,7 +170,10 @@
             <div class="slide-text-content">
               <h3 class="slide-title">Нежный пломбир с&nbsp;клубничным джемом</h3>
               <p class="slide-text">Натуральное мороженое из&nbsp;свежих сливок и&nbsp;молока с&nbsp;вкуснейшим клубничным джемом – это&nbsp;идеальный десерт для&nbsp;всей семьи.</p>
-              <a class="btn btn-secondary" href="#">Заказать</a>
+              <a class="btn btn-secondary" href="#">
+                <span>Заказать</span>
+                <span class="btn-loading-circle"></span>
+              </a>
             </div>
             <div class="slide-img-wrapper">
               <img src="images/slider-strawberry.png" width="306" height="507" alt="">
@@ -175,7 +183,10 @@
             <div class="slide-text-content">
               <h3 class="slide-title">Сливочное мороженое со&nbsp;вкусом банана</h3>
               <p class="slide-text">Сливочное мороженое с&nbsp;ярким банановым вкусом подарит вам свежесть и&nbsp;наслаждение даже в&nbsp;самый жаркий летний день.</p>
-              <a class="btn btn-secondary" href="#">Заказать</a>
+              <a class="btn btn-secondary" href="#">
+                <span>Заказать</span>
+                <span class="btn-loading-circle"></span>
+              </a>
             </div>
             <div class="slide-img-wrapper">
               <img src="images/slider-banana.png" width="306" height="507" alt="">
@@ -185,7 +196,10 @@
             <div class="slide-text-content">
               <h3 class="slide-title">Карамельный пломбир с&nbsp;маршмеллоу</h3>
               <p class="slide-text">Необычный сладкий десерт с&nbsp;карамельным топпингом и&nbsp;кусочками зефира завоюет сердца сладкоежек всех возрастов.</p>
-              <a class="btn btn-secondary" href="#">Заказать</a>
+              <a class="btn btn-secondary" href="#">
+                <span>Заказать</span>
+                <span class="btn-loading-circle"></span>
+              </a>
             </div>
             <div class="slide-img-wrapper">
               <img src="images/slider-marshmellow.png" width="306" height="507" alt="">
@@ -253,12 +267,18 @@
           <li class="presents-item presents-item-raspberry">
             <h3 class="section-subtitle">Малинка даром!</h3>
             <p class="presents-text">При&nbsp;покупке 2&nbsp;кг любого фруктового мороженого добавим в&nbsp;ваш заказ банку малинового варенья бесплатно.</p>
-            <a class="btn btn-secondary" href="#">Хочу подарок</a>
+            <a class="btn btn-secondary" href="#">
+              <span>Хочу подарок</span>
+              <span class="btn-loading-circle"></span>
+            </a>
           </li>
           <li class="presents-item presents-item-marshmellow">
             <h3 class="section-subtitle">Маршмеллоу даром!</h3>
             <p class="presents-text">При&nbsp;покупке 2&nbsp;кг пломбира добавим в&nbsp;ваш заказ упаковку нежных<br> зефирок совершенно бесплатно.</p>
-            <a class="btn btn-secondary" href="#">Хочу подарок</a>
+            <a class="btn btn-secondary" href="#">
+              <span>Хочу подарок</span>
+              <span class="btn-loading-circle"></span>
+            </a>
           </li>
         </ul>
       </section>
@@ -362,7 +382,10 @@
                 <label class="visually-hidden" for="subscribing-form-email-field">Введите Ваш email</label>
                 <input class="subscribing-form-email-input" id="subscribing-form-email-field" name="user-email" type="email" placeholder="email@example.com" value="" required>
               </p>
-              <button class="btn btn-accent" type="submit">Отправить</button>
+              <button class="btn btn-accent" type="submit">
+                <span>Отправить</span>
+                <span class="btn-loading-circle"></span>
+              </button>
             </form>
           </div>
         </section>
@@ -402,7 +425,10 @@
             </div>
             <input class="delivery-form-address-input" id="delivery-form-address-field" name="delivery-address" type="text" placeholder="ул. Большая Конюшенная, 19/8" value="" required>
           </div>
-          <button class="btn btn-accent" type="submit">Отправить</button>
+          <button class="btn btn-accent" type="submit">
+            <span>Отправить</span>
+            <span class="btn-loading-circle"></span>
+          </button>
         </form>
       </section>
       <section class="contacts">
@@ -423,7 +449,10 @@
               </dd>
             </div>
           </dl>
-          <a class="btn btn-accent" href="#">Форма обратной связи</a>
+          <a class="btn btn-accent" href="#">
+            <span>Форма обратной связи</span>
+            <span class="btn-loading-circle"></span>
+          </a>
         </div>
       </section>
     </main>
@@ -493,9 +522,26 @@
             <label class="visually-hidden" for="feedback-form-message-textarea">Введите Ваше сообщение нам</label>
             <textarea class="feedback-form-message-area" id="feedback-form-message-textarea" name="user-message" rows="6" placeholder="В свободной форме"></textarea>
           </p>
-          <button class="btn btn-accent" type="submit">Отправить</button>
+          <button class="btn btn-accent" type="submit">
+            <span>Отправить</span>
+            <span class="btn-loading-circle"></span>
+          </button>
         </form>
       </div>
     </div>
+    <!--<div style="
+      position: absolute;
+      top: 0;
+      width: 1366px;
+      height: 738px;
+      z-index: 10;
+      margin: 0 auto;
+      background-image: url('../../../gllacy_pixel_perfect/cart-with-items-popover.png');
+      background-repeat: no-repeat;
+      opacity: 0.5;
+      left: 50%;
+      transform: translateX(-50%);
+      filter: invert(1);
+    "></div> -->
   </body>
 </html>
