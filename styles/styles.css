@@ -262,7 +262,7 @@ img {
 
   display: inline-block;
   margin: 0 20px 20px 0;
-  padding: 12px 32px;
+  padding: 12px 33px 12px 32px;
   max-width: 250px;
 
   font-family: var(--inter);
@@ -629,6 +629,10 @@ img {
 }
 
 .catalog-cards-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 30px;
+  row-gap: 91px;
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -647,6 +651,15 @@ img {
 
 .to-card-link {
   text-decoration: none;
+}
+
+.to-card-link:hover .section-subtitle,
+.to-card-link:focus .section-subtitle {
+  opacity: 0.7;
+}
+
+.to-card-link:active .section-subtitle {
+  opacity: 0.7;
 }
 
 .catalog-card-img-wrapper {
@@ -669,12 +682,22 @@ img {
 }
 
 .catalog-cards-item .section-subtitle {
+  margin-bottom: 8px;
+  
+  font-size: var(--subtitle-font-s);
   line-height: var(--line-height-l);
 }
 
 .catalog-card-text {
-  margin: 0 auto;
+  margin: 0 auto 16px;
   max-width: 190px;
+}
+
+.catalog-card-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .catalog-card-price {
@@ -697,6 +720,36 @@ img {
   background-color: var(--color-extra-bright);
   border: none;
   border-radius: 50%;
+
+  transition: all 0.1s ease-out;
+}
+
+.to-cart-btn:hover {
+  color: #000000;
+
+  background-color: rgba(252, 252, 252, 0.3);
+  border: 2px solid var(--color-extra-bright);
+
+  transition: all 0.1s ease-out;
+}
+
+.to-cart-btn:focus {
+  border: 2px solid var(--color-extra-dark);
+}
+
+.to-cart-btn:active {
+  color: #000000;
+
+  background-color: var(--color-pink-extra-light);
+  border: 2px solid var(--color-extra-bright);
+}
+
+/*Чтобы сделать кнопку корзины неактивной - добавить элементу с классом "to-cart-btn" класс "is-disabled"*/
+.to-cart-btn.is-disabled {
+  color: #000000;
+
+  background-color: var(--color-neutral-dark);
+  border: none;
 }
 
 .page-header {
@@ -1654,28 +1707,31 @@ img {
 }
 
 .presents {
-  padding-top: 80px;
-  padding-bottom: 81px;
+  padding-top: 81px;
+  padding-bottom: 82px;
 
   color: var(--color-extra-dark);
 }
 
 .presents .section-title {
   margin: 0 auto;
-  margin-bottom: 55px;
+  margin-bottom: 54px;
   max-width: 434px;
 
   text-align: center;
 }
 
 .presents-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
 .presents-item {
-  padding: 36px;
+  padding: 37px 36px 16px;
   width: 100%;
   max-width: 570px;
 
@@ -1694,7 +1750,7 @@ img {
 }
 
 .presents-item .section-subtitle {
-  margin-bottom: 28px;
+  margin-bottom: 27px;
 }
 
 .presents-text {
@@ -1703,12 +1759,12 @@ img {
 }
 
 .popular {
-  padding: 80px 0;
+  padding: 0 0 80px;
 }
 
 .popular .section-title {
   margin: 0 auto;
-  margin-bottom: 107px;
+  margin-bottom: 106px;
   max-width: 527px;
 
   text-align: center;
@@ -1725,7 +1781,7 @@ img {
 }
 
 .advantages-content {
-  padding: 56px 40px;
+  padding: 57px 40px;
 
   background-color: var(--color-white);
   border-radius: 16px;
@@ -1733,7 +1789,7 @@ img {
 
 .advantages-content .section-title {
   margin: 0 auto;
-  margin-bottom: 56px;
+  margin-bottom: 55px;
   width: 995px;
   text-align: center;
 }
