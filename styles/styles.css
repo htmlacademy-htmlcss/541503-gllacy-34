@@ -176,7 +176,8 @@ img {
 
 .page-header input:hover,
 .index-main input:hover,
-.modal input:hover {
+.modal input:hover,
+.modal textarea:hover {
   border-color: var(--color-extra-dark);
 }
 
@@ -188,7 +189,8 @@ img {
 
 .page-header input:focus,
 .index-main input:focus,
-.modal input:focus {
+.modal input:focus,
+.modal textarea:focus {
   padding: 12px 14px;
 
   color: var(--color-extra-dark);
@@ -199,15 +201,26 @@ img {
 /*Для отображения ошибки добавить соответствующему полю ввода класс "is-error"*/
 .page-header input.is-error,
 .index-main input.is-error,
-.modal input.is-error {
+.modal input.is-error,
+.modal textarea.is-error {
   color: var(--color-extra-dark);
 
   border-color: var(--color-error);
 }
 
+.page-header input.is-error:hover,
+.index-main input.is-error:hover,
+.modal input.is-error:hover,
+.modal textarea.is-error:hover {
+  padding: 12px 14px;
+
+  border-width: 2px;
+}
+
 .page-header input:disabled,
 .index-main input:disabled,
-.modal input:disabled {
+.modal input:disabled,
+.modal textarea:disabled {
   color: rgba(45, 52, 64, 0.65);
 
   background-color: var(--color-light);
@@ -218,7 +231,8 @@ img {
 .modal input:disabled:hover,
 .page-header input:disabled:focus,
 .index-main input:disabled:focus,
-.modal input:disabled:focus {
+.modal input:disabled:focus,
+.modal textarea:disabled:focus {
   border-color: var(--color-neutral-dark);
 }
 
@@ -2003,7 +2017,8 @@ img {
   border-radius: 4px;
 }
 
-.subscribing-form .subscribing-form-email-input:focus {
+.subscribing-form .subscribing-form-email-input:focus,
+.subscribing-form .subscribing-form-email-input.is-error:hover {
   padding: 12px 15px;
 }
 
@@ -2158,7 +2173,8 @@ img {
   border-radius: 4px;
 }
 
-.delivery-form input:focus {
+.delivery-form input:focus,
+.delivery-form input.is-error:hover {
   padding: 13px 15px 11px 15px;
 }
 
@@ -2172,7 +2188,8 @@ img {
   padding: 12px 11px 12px 14px;
 }
 
-.delivery-form .delivery-form-date-input:focus {
+.delivery-form .delivery-form-date-input:focus,
+.delivery-form .delivery-form-date-input.is-error:hover {
   padding: 11px 10px 11px 13px;
 }
 
@@ -2302,7 +2319,7 @@ img {
   z-index: 11;
 
   margin: 0 auto;
-  padding: 64px 62px 66px 64px;
+  padding: 66px 64px 46px 64px;
   width: 570px;
 
   background-color: var(--color-extra-light);
@@ -2311,9 +2328,15 @@ img {
   transform: translateY(-50%);
 }
 
+@-moz-document url-prefix("") {
+  .modal-feedback {
+    padding-top: 64px;
+  }
+}
+
 .modal-feedback-close-btn {
   position: absolute;
-  top: 32px;
+  top: 33px;
   right: 32px;
 
   display: block;
@@ -2331,7 +2354,7 @@ img {
 }
 
 .modal-feedback-title {
-  margin: 0 0 32px;
+  margin: 0 0 31px;
 
   font-size: var(--subtitle-font-l);
   line-height: var(--line-height-xl);
@@ -2344,12 +2367,18 @@ img {
 }
 
 .textarea-label-wrapper {
-  margin: 0 0 32px;
+  margin: 0 0 27px;
+}
+
+@-moz-document url-prefix("") {
+  .textarea-label-wrapper {
+    margin: 0 0 30px;
+  }
 }
 
 .feedback-form input,
 .feedback-form textarea {
-  padding: 14px 16px;
+  padding: 14px 16px 12px;
   width: 100%;
 
   font-size: var(--font-m);
@@ -2360,8 +2389,26 @@ img {
   border-radius: 4px;
 }
 
+.feedback-form input:focus,
+.feedback-form input.is-error:hover {
+  padding: 13px 15px 11px;
+}
+
 .feedback-form textarea {
+  padding-bottom: 13px;
+
   resize: none;
+}
+
+@-moz-document url-prefix("") {
+  .feedback-form textarea {
+    min-height: 148px;
+  }
+}
+
+.feedback-form textarea:focus,
+.feedback-form textarea.is-error:hover {
+  padding: 13px 15px 12px;
 }
 
 .feedback-form input::placeholder,
@@ -2371,6 +2418,7 @@ img {
 
 .feedback-form .btn-accent {
   display: block;
+  margin-right: -3px;
   margin-left: auto;
 }
 
