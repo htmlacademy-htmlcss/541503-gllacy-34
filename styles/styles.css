@@ -1810,6 +1810,8 @@ img {
 }
 
 .presents-item {
+  display: flex;
+  flex-direction: column;
   padding: 37px 36px 16px;
   width: 100%;
   max-width: 570px;
@@ -1833,8 +1835,13 @@ img {
 }
 
 .presents-text {
-  margin-bottom: 28px;
+  margin: 0 0 28px;
   max-width: 328px;
+}
+
+.presents-item .btn-secondary {
+  align-self: flex-start;
+  margin-top: auto;
 }
 
 .popular {
@@ -1852,7 +1859,6 @@ img {
 .advantages {
   padding: 24px;
   width: 100%;
-  min-height: 480px;
 
   background-color: var(--color-yellow);
   background-image: url("../images/waffle.png");
@@ -2042,6 +2048,7 @@ img {
 
   background-image: url("../images/delivery.jpg");
   background-repeat: no-repeat;
+  background-size: cover;
   border-radius: 16px;
 }
 
@@ -2225,7 +2232,7 @@ img {
 
   background-image: url("../images/feedback.jpg");
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: cover;
   border-radius: 16px;
 }
 
@@ -2351,6 +2358,15 @@ img {
   border: none;
 
   cursor: pointer;
+}
+
+.modal-feedback-close-btn:hover,
+.modal-feedback-close-btn:focus {
+  opacity: 0.7;
+}
+
+.modal-feedback-close-btn:active {
+  opacity: 0.5;
 }
 
 .modal-feedback-title {
