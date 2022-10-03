@@ -855,10 +855,10 @@ img {
   position: absolute;
   left: 0;
   right: 0;
-  top: 100%;
+  top: calc(100% - 10px);
 
   width: 100%;
-  height: 10px;
+  height: 20px;
 }
 
 .site-menu-link:hover {
@@ -1070,10 +1070,10 @@ img {
   position: absolute;
   left: 0;
   right: 0;
-  top: 100%;
+  top: calc(100% - 10px);
 
   width: 100%;
-  height: 10px;
+  height: 20px;
 }
 
 .user-menu-link-search {
@@ -2918,6 +2918,15 @@ img {
   line-height: var(--line-height-s);
   text-decoration: none;
   color: var(--color-extra-dark);
+}
+
+.catalog-cards-control-btn:not(.is-disabled):hover,
+.catalog-cards-control-btn:not(.is-disabled):focus {
+  opacity: 0.7;
+}
+
+.catalog-cards-control-btn:not(.is-disabled):active {
+  opacity: 0.5;
 }
 
 .catalog-cards-control-btn.is-disabled {
